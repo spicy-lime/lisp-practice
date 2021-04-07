@@ -10,3 +10,9 @@
 	  (remove-ifmikey func (cdr lst))
 	  (cons (car lst) (remove-ifmikey func (cdr lst)))
 	  )))
+
+(defun list+ (lst n)
+  (mapcar #'(lambda (x) (+ x n)) lst))
+
+
+(defun make-adder (n) #'(lambda (x) (+ x n)))
